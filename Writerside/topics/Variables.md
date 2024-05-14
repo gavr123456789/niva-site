@@ -1,16 +1,16 @@
 # Variables
 
 ```Scala
-x = 1
+x = 1 // no val or let
 x inc echo 
 
-person1 = Person name: "Alice" age: 24
+person = Person name: "Alice" age: 24
 
 mut answer = 31
 answer <- 42
 
-person1 echo
-person2 echo
+person echo
+answer echo
 
 // explicit type declaration
 name::String = "Alice"

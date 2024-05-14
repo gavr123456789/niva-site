@@ -1,5 +1,5 @@
 # Niva
-///
+
 It will be Smalltalk like language, but statically typed.
 Niva targets JVM, and provides easy way to call any Java\Kotlin code.  
 On an imaginary graph of complexity, I would put a field here:  
@@ -21,7 +21,7 @@ This greatly reduces dynamism, the code is easier to understand because you alwa
 Almost everything in niva is a message send to object, for example there are no while loop or if syntax.
 (Thanks to the inline, this does not create additional overhead costs)
 
-///
+/// /// README.MD
 
 * Creating functions
 * Creating types

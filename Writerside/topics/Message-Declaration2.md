@@ -21,10 +21,10 @@ ReceiverType op arg = [...]
 Path / x::String = [...]
 // Keyword
 ReceiverType key1 key2 = [...]
-Int from::Int = [...]
+Int from::Int to::Int = [...]
 ```
 
-There are a syntax for adding local names for the arguments
+There is a syntax for adding local names for function arguments  
 ```Scala
 Int add: x::Int = [
   ^ this + x

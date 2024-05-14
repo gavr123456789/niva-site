@@ -15,10 +15,12 @@ Let's remove parenthesis
 ```C
 foo bar foobar 42 
 ```
-And now invert to make it readable:
+And now invert, to make it readable:
 ```Scala
 42 foobar bar foo
 ```
+
+
 
 Now we got niva syntax!
 ```Scala
@@ -28,33 +30,34 @@ Now we got niva syntax!
 "Hello" reverse == "olleH"
 ```
 
-So every call has a receiver that receive "message"
-`1 inc factorial`
+Some ML languages use pipe operators to achieve the same readability  
+`42 |> foobar |> bar |> foo`
+
+
+So every call has a receiver that receive "message"  
+`1 inc factorial`  
 `receiver <- message1 <- message2`
 
-Some ML languages use pipe operators to achieve the same readability
-```
-42 |> foobar |> bar |> foo
-```
+
 
 Here is a more complex example:
 ```Scala
 TODOOOOOOOOOOOOOOOOOOOO
-...
 ```
 
-There are three kinds of messages, you are already familiar with unary, it has one arg(it's receiver).
+There are three kinds of messages.  
+You are already familiar with unary, it has one arg(it's receiver).  
 But what if we need more args?
 
 ### Keyword
 //This is the most common way to send messages
 
-What about sending messages with arguments?  
-`1 add 2` okey, but what if we have more args
-`1 addMany 2 3 4 add 2` this is pretty unreadable, so we need to distinguish each arg
-`1 add: 2`
-`widget widgh: 250 height: 250`
-If you need to compose calls use (), also you can put args on new lines: 
+What about sending messages with arguments?   
+`1 add 2` okay, but what if we have more args  
+`1 addMany 2 3 4 add 2` this is pretty unreadable, so we need to distinguish each arg  
+`1 add: 2`  
+`widget widgh: 250 height: 250`  
+If you need to compose calls use (), also you can put args on new lines:   
 ```Scala
 widget 
     widgh: 250 
@@ -84,7 +87,11 @@ But its not operators, its still a messages for receiver:
 `receiver + arg`
 
 unary always evaluate first,  
-`1 inc inc + 4 dec` -> `(1 inc inc) + (4 dec)` -> `3 + 3` -> `6`
+`1 inc inc + 4 dec` ->    
+`(1 inc inc) + (4 dec)` ->    
+`3 + 3` ->  
+`6`    
+
 Here are some examples that became looks like DSL because of that rule:
 ```Scala
 TODOOOOOOOOOOOOOOOOOOOO

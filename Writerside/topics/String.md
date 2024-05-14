@@ -1,0 +1,18 @@
+# String
+
+```Scala
+type Person name: String age: Int
+alice = Person name: "Alica" age: 30
+bob = Person name: "Bob" age: 31
+
+{1 2 3} joinWith: ", " |> echo
+"---" echo
+{alice bob} joinTransform: [ it name ] |> echo
+"---" echo
+{alice bob} 
+    joinWith: "\n" 
+    transform: [ it name + ": " + it age toString ] |> 
+    echo
+
+```
+
