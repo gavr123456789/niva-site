@@ -1,6 +1,1 @@
 # Expressions
-
-```Scala
-
-
-```
