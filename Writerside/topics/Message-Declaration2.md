@@ -18,16 +18,18 @@ Declaration of binary and unary work the same way:
 ```Scala
 // Binary
 ReceiverType op arg = [...]
-Path / x::String = [...]
+Path / x::String = 1 echo
 // Keyword
 ReceiverType key1 key2 = [...]
-Int from::Int to::Int = [...]
+Int from::Int to::Int = 1 echo
 ```
 
-There is a syntax for adding local names for function arguments  
+## Full examples
 ```Scala
-Int add: x::Int = [
+Int add: x::Int -> Int = [
   ^ this + x
 ]
 1 add: 2 // call
 ```
+
+^ is return, this is Smalltalk syntax. 
