@@ -5,7 +5,8 @@
     <variables></variables>
     <build-profile instance="n">
         <variables>
-            <noindex-content>true</noindex-content>
+            <noindex-content>false</noindex-content>
+            <offline-docs>true</offline-docs>
         </variables>
     </build-profile>
 
