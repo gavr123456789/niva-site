@@ -1,7 +1,31 @@
 # Niva
+///
 It will be Smalltalk like language, but statically typed.
+Niva targets JVM, and provides easy way to call any Java\Kotlin code.  
+On an imaginary graph of complexity, I would put a field here:  
+Go < Niva < Java < Kotlin < Scala
 
+Niva is strongly inspired by the forgotten Smalltalk language  
 
+![smalltalk rules.png](smalltalk rules.png)
+
+Niva combines some OOP and functional properties  
+  
+OOP  
+There are no functions, everything is method, in other words there is always a receiver
+
+Functional  
+There are no inheritance or interfaces. Instead, tagged unions are heavily utilized.  
+This greatly reduces dynamism, the code is easier to understand because you always know which specific method will be called.
+
+Almost everything in niva is a message send to object, for example there are no while loop or if syntax.
+(Thanks to the inline, this does not create additional overhead costs)
+
+///
+
+* Creating functions
+* Creating types
+* Creating unions
 ## Backend
 Current backend is Kotlin, because you get 4 backends for free - JVM, Native, JS, Wasm, also ecosystem is rich.
 A lot of pet-project languages are translated into js, which is very high-level, so why not be translated into a real language.
