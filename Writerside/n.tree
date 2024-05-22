@@ -7,30 +7,28 @@
                  start-page="reference.md">
 
     <toc-element topic="reference.md">
-        <toc-element topic="Basic.md">
-            <toc-element topic="Message-Send.md"/>
-            <toc-element topic="Variables.md"/>
-            <toc-element topic="Message-Declaration.md"/>
-            <toc-element topic="Message-Declaration2.md"/>
-            <toc-element topic="CodeBlocks.md"/>
-            <toc-element topic="Pipes-and-Cascades.md"/>
-            <toc-element topic="CompileTime-Reflection.md"/>
-            <toc-element topic="LearnXinYstyle.md"/>
-            <toc-element topic="ExamplesTODO.md">
-                <toc-element topic="ErrorHandle.md"/>
-                <toc-element topic="TypeConstrunctors.md"/>
-                <toc-element topic="String.md"/>
-                <toc-element topic="Ranges.md"/>
-                <toc-element topic="ControlFlow.md"/>
-                <toc-element topic="Cycles.md"/>
-                <toc-element topic="CollectionsExampler.md"/>
-            </toc-element>
+        <toc-element topic="Installation.md"/>
+    </toc-element>
+    <toc-element topic="Basic.md">
+        <toc-element topic="Message-Send.md"/>
+        <toc-element topic="Variables.md"/>
+        <toc-element topic="Message-Declaration.md"/>
+        <toc-element topic="Message-Declaration2.md"/>
+        <toc-element topic="CodeBlocks.md"/>
+        <toc-element topic="Pipes-and-Cascades.md"/>
+        <toc-element topic="CompileTime-Reflection.md"/>
+        <toc-element topic="LearnXinYstyle.md"/>
+        <toc-element topic="ExamplesTODO.md">
+            <toc-element topic="ErrorHandle.md"/>
+            <toc-element topic="TypeConstrunctors.md"/>
+            <toc-element topic="String.md"/>
+            <toc-element topic="Ranges.md"/>
+            <toc-element topic="ControlFlow.md"/>
+            <toc-element topic="Cycles.md"/>
+            <toc-element topic="CollectionsExampler.md"/>
         </toc-element>
-        <toc-element topic="Mutability.md"/>
-        <toc-element topic="Expressions.md">
-            <toc-element topic="Primitives.md"/>
-            <toc-element topic="Collections.md"/>
-        </toc-element>
+    </toc-element>
+    <toc-element topic="Structured-Guide.md">
         <toc-element topic="Declarations.md">
             <toc-element topic="Methods.md">
                 <toc-element topic="Constructors.md"/>
@@ -43,6 +41,13 @@
                 <toc-element topic="Internal.md"/>
             </toc-element>
         </toc-element>
+        <toc-element topic="Expressions.md">
+            <toc-element topic="Primitives.md"/>
+            <toc-element topic="Collections.md"/>
+        </toc-element>
     </toc-element>
-    <toc-element topic="Installation.md"/>
+    <toc-element topic="Concepts.md">
+        <toc-element topic="Error-handling.md"/>
+        <toc-element topic="Mutability.md"/>
+    </toc-element>
 </instance-profile>

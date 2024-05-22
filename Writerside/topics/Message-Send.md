@@ -3,7 +3,6 @@
 
 ### Unary
 
-Instead of `echo("Hello world")` we use `"Hello world" echo`
 
 Let's look at nested function call from C like lang:
 ```C
@@ -90,12 +89,14 @@ unary always evaluate first,
 `1 inc inc + 4 dec` ->    
 `(1 inc inc) + (4 dec)` ->    
 `3 + 3` ->  
-`6`    
+`6`
 
 Here are some examples that became looks like DSL because of that rule:
 ```Scala
 TODOOOOOOOOOOOOOOOOOOOO
 Date
 ...
-Color for text
+Colors for text
 ```
+
+

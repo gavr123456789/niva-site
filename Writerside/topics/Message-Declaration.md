@@ -11,8 +11,7 @@ type Rectangle
 ```
 
 ## Constructors
-Constructors looks like keyword messages for types:
-
+Constructors looks like keyword messages for types itself(static messages..?):
 ```Scala
 person = Person name: "Alice" age: 24
 
@@ -26,4 +25,5 @@ rectangle = Rectangle
 You can change the order of the fields, 
 this is very convenient if you want to add a new field, 
 but do not want to add it to the end.   
-`person = Person age: 24 name: "Alice"`
+  
+`Person = Person age: 24 name: "Alice"`

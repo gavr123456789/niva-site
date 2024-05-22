@@ -1,20 +1,20 @@
 # Variables
-
+There are no special keyword to declare an immutable variable:
 ```Scala
 x = 1 // no val or let
 x inc echo 
-
-person = Person name: "Alice" age: 24
-
-mut answer = 31
-answer <- 42
-
-person echo
-answer echo
-
-// explicit type declaration
-name::String = "Alice"
-
 ```
 
-`niva run main.niva`
+
+But there is "mut" for mutable
+```Scala
+mut answer = 31
+answer <- 42 // since = already taken u mutate with <-
+// <- also makes mutations more noticeable
+
+```
+Explicit type declaration:
+```Scala
+name::String = "Alice"
+```
+
