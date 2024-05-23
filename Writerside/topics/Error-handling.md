@@ -1,5 +1,6 @@
-# Error handling
+# Error effects handling
 
+TODO
 ```Scala
 errordomain MyError =
 | Error1 text: String

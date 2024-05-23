@@ -12,8 +12,9 @@
     <toc-element topic="Basic.md">
         <toc-element topic="Message-Send.md"/>
         <toc-element topic="Variables.md"/>
+        <toc-element topic="Type-declaration.md"/>
         <toc-element topic="Message-Declaration.md"/>
-        <toc-element topic="Message-Declaration2.md"/>
+        <toc-element topic="Constructors.md"/>
         <toc-element topic="CodeBlocks.md"/>
         <toc-element topic="Pipes-and-Cascades.md"/>
         <toc-element topic="CompileTime-Reflection.md"/>
@@ -28,23 +29,9 @@
             <toc-element topic="CollectionsExampler.md"/>
         </toc-element>
     </toc-element>
-    <toc-element topic="Structured-Guide.md">
-        <toc-element topic="Declarations.md">
-            <toc-element topic="Methods.md">
-                <toc-element topic="Constructors.md"/>
-            </toc-element>
-            <toc-element topic="Types.md">
-                <toc-element topic="Custom.md">
-                    <toc-element topic="Union.md"/>
-                    <toc-element topic="Enum.md"/>
-                </toc-element>
-                <toc-element topic="Internal.md"/>
-            </toc-element>
-        </toc-element>
-        <toc-element topic="Expressions.md">
-            <toc-element topic="Primitives.md"/>
-            <toc-element topic="Collections.md"/>
-        </toc-element>
+    <toc-element topic="Advanced.md">
+        <toc-element topic="Any-Nothing.md"/>
+        <toc-element topic="Not-macros.md"/>
     </toc-element>
     <toc-element topic="Concepts.md">
         <toc-element topic="Error-handling.md"/>

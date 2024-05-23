@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rules SYSTEM "https://resources.jetbrains.com/writerside/1.0/redirection-rules.dtd">
+<rules>
+    <!-- format is as follows
+    <rule id="<unique id>">
+        <accepts>page.html</accepts>
+    </rule>
+    -->
+    <rule id="7cdb0d46">
+        <description>Created after removal of "Declarations" from niva</description>
+        <accepts>Declarations.html</accepts>
+    </rule>
+    <rule id="57aa430c">
+        <description>Created after removal of "Methods" from niva</description>
+        <accepts>Methods.html</accepts>
+    </rule>
+    <rule id="420f0764">
+        <description>Created after removal of "Constructors" from niva</description>
+        <accepts>Constructors.html</accepts>
+    </rule>
+    <rule id="3db3625a">
+        <description>Created after removal of "Types" from niva</description>
+        <accepts>Types.html</accepts>
+    </rule>
+    <rule id="7bf5b6a0">
+        <description>Created after removal of "Custom" from niva</description>
+        <accepts>Custom.html</accepts>
+    </rule>
+    <rule id="badf9f9">
+        <description>Created after removal of "Union" from niva</description>
+        <accepts>Union.html</accepts>
+    </rule>
+    <rule id="40b73f2d">
+        <description>Created after removal of "Enum" from niva</description>
+        <accepts>Enum.html</accepts>
+    </rule>
+    <rule id="457a10eb">
+        <description>Created after removal of "Internal" from niva</description>
+        <accepts>Internal.html</accepts>
+    </rule>
+    <rule id="98320ee">
+        <description>Created after removal of "Expressions" from niva</description>
+        <accepts>Expressions.html</accepts>
+    </rule>
+    <rule id="3a96e3be">
+        <description>Created after removal of "Primitives" from niva</description>
+        <accepts>Primitives.html</accepts>
+    </rule>
+    <rule id="b99c23a">
+        <description>Created after removal of "Collections" from niva</description>
+        <accepts>Collections.html</accepts>
+    </rule>
+    <rule id="40f622f1">
+        <description>Created after removal of "Structured Guide TODO" from niva</description>
+        <accepts>Structured-Guide.html</accepts>
+    </rule>
+</rules>

@@ -1,5 +1,15 @@
 # CompileTime Reflection
 // TODO
+
+You can get the names of the arguments with 
+`Compiler getName: numberOfArgument` message.
+It can be really helpful to create cool debug and assert messages.
+
+```Scala
+TODO print
+TODO assert
+```
+
 ```Scala
 type Tape pos: Int
 
