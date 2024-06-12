@@ -6,7 +6,16 @@ You can get the names of the arguments with
 It can be really helpful to create cool debug and assert messages.
 
 ```Scala
-TODO print
+TODO print debug
+T debug -> T = [
+    receiverName = Compiler getName: 0
+    value = this toString
+    "$receiverName = $value" echo
+    ^ this
+]
+x = 5
+x debug // "x = 5"
+
 TODO assert
 ```
 

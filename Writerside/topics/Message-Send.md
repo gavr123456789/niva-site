@@ -52,11 +52,13 @@ But what if we need more args?
 //This is the most common way to send messages
 
 What about sending messages with arguments?   
-`1 add 2` okay, but what if we have more args  
-`1 addMany 2 3 4 add 2` this is pretty unreadable, so we need to distinguish each arg  
+`1 add 2`  
+okay, but what if we have more args  
+`1 addMany 2 3 4 add 2`  
+this is pretty unreadable, so we need to distinguish each arg  
 `1 add: 2`  
 `widget widgh: 250 height: 250`  
-If you need to compose calls use (), also you can put args on new lines:   
+If you need to compose keyword msgs inside each other use (), also you can put args on new lines:   
 ```Scala
 widget 
     widgh: 250 
@@ -98,5 +100,11 @@ Date
 ...
 Colors for text
 ```
+
+## Send keyword to keyword
+
+`1 from: 2 to: 3`
+Is
+
 
 

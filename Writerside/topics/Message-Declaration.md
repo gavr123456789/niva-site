@@ -54,10 +54,24 @@ result echo
 ```
 Try to run this example `niva filename.niva`
 
-## Short form
+## Single expression form
 If the method body consists of a single expression, 
 then you can do without a block of code:
 ```Scala
 Int add::Int = this + add
 ```
 With short form you can omit the return type(`-> Int`) and return statement(`^`)
+
+## extend
+
+```Scala
+
+type Person
+
+extend Person [
+    on unary = 1 echo
+    on + binary::Int = binary echo
+    on key::Int word::String = key echo
+    on withLocalName: x::Int = x echo
+]
+```

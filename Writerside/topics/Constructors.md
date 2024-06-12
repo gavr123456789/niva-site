@@ -11,7 +11,7 @@ Float PI echo
 
 
 ## Default parameters mimicry
-It's impossible to create default field vales in niva,
+It's impossible to create default field values in niva,
 but you can replace them with constructors:
 ```Scala
 type Rectangle 
@@ -20,7 +20,7 @@ type Rectangle
     w: Int
     h: Int
     
-constructor Rectangle w: Int h: Int = Rectangle 
+constructor Rectangle w::Int h::Int = Rectangle 
     x: 0 // default x and y
     y: 0 
     w: w // send remaining args
