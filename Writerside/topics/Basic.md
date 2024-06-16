@@ -43,11 +43,12 @@ It will take longer for the first time
 
 
 
-## Without explanation
+## Without much explanation
 Here are syntax examples to give you a general impression. Everything will be discussed in detail below.
 ```Scala
+// declare type with 2 fields
 type Person name: String age: Int
-person = Person name: "Alice" age: 24 // constructor call
+person = Person name: "Alice" age: 24 // instantiate
 
 person name echo        // get 
 person name: "new name" // set
@@ -56,13 +57,12 @@ person name: "new name" // set
 Person hi = "Hi! my name is $name" echo
 person hi // unary call
 
-// keyword method declaration
+// method with args
 Person foo::Int bar::Int = [
-    age + poo + bar |> echo
-    // same as
-    (age + poo + bar) echo
+    age + foo + bar |> echo // same as
+    (age + poo + bar) echo 
 ]
-person foo: 1 bar: 2 // keyword call
+person foo: 1 bar: 2 // 27 printed
 
 union Shape =
 | Rectangle width: Int height: Int
