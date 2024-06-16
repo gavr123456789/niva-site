@@ -16,7 +16,15 @@ one and the same.
 To create an object, you just need to send a message
 from the fields of the type to the type itself
 ```Scala
+type Person name: String age: Int
 person = Person name: "Alice" age: 24
+
+
+type Rectangle
+    width: Int 
+    heigth: Int
+    x: Int
+    y: Int
 
 rectangle = Rectangle
     width: 1 
