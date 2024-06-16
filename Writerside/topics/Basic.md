@@ -60,7 +60,7 @@ person hi // unary call
 // method with args
 Person foo::Int bar::Int = [
     age + foo + bar |> echo // same as
-    (age + poo + bar) echo 
+    (age + foo + bar) echo 
 ]
 person foo: 1 bar: 2 // 27 printed
 
