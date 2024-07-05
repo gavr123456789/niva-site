@@ -42,32 +42,3 @@ It will take longer for the first time
    5) [Cascade](Pipes-and-Cascades.md)
 
 
-
-## Without much explanation
-Here are syntax examples to give you a general impression. Everything will be discussed in detail below.
-```Scala
-// declare type with 2 fields
-type Person name: String age: Int
-person = Person name: "Alice" age: 24 // instantiate
-
-person name echo        // get 
-person name: "new name" // set
-
-// unary method declaration
-Person hi = "Hi! my name is $name" echo
-person hi // unary call
-
-// method with args
-Person foo::Int bar::Int = [
-    age + foo + bar |> echo // same as
-    (age + foo + bar) echo 
-]
-person foo: 1 bar: 2 // 27 printed
-
-union Shape =
-| Rectangle width: Int height: Int
-| Circle    radius: Int
-
-constructor Float PI = 3.14
-Float PI // constructor call
-```
