@@ -9,13 +9,14 @@ You can chain kw messages with pipes
 https://en.wikipedia.org/wiki/Method_cascading  
 
 
-`a b; c; d` has same effect as
+`x = a b; c; d` has same effect as
 ```Scala
 a b
 a c
 a d
-a
+x = a
 ```
+So its applying all the messages to the receiver, and then returns it.
 
 With the help of cascade you can turn any API
 into a builder pattern, even if this was not intended!
