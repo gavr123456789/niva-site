@@ -21,7 +21,6 @@
         <toc-element topic="Enum.md"/>
         <toc-element topic="LearnXinYstyle.md"/>
         <toc-element topic="ExamplesTODO.md">
-            <toc-element topic="ErrorHandle.md"/>
             <toc-element topic="TypeConstrunctors.md"/>
             <toc-element topic="String.md"/>
             <toc-element topic="Ranges.md"/>

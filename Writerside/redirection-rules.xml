@@ -54,4 +54,8 @@
         <description>Created after removal of "Structured Guide TODO" from niva</description>
         <accepts>Structured-Guide.html</accepts>
     </rule>
+    <rule id="2fe00caa">
+        <description>Created after removal of "ErrorHandle" from niva</description>
+        <accepts>ErrorHandle.html</accepts>
+    </rule>
 </rules>
