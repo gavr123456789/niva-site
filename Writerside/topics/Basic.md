@@ -11,8 +11,7 @@ Instead of `echo("Hello world")` we use `"Hello world" echo`
 
 
 
-## Message send 
-![smalltalk rules.png](smalltalk rules.png)
+## Message send
 
 Everything in niva except the type declaration is a message sending, kinda like lisp, but no parentheses and typed.
 

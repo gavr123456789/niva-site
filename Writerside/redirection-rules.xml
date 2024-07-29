@@ -58,4 +58,8 @@
         <description>Created after removal of "ErrorHandle" from niva</description>
         <accepts>ErrorHandle.html</accepts>
     </rule>
+    <rule id="5eb2c448">
+        <description>Created after removal of "TypeConstructors" from niva</description>
+        <accepts>TypeConstrunctors.html</accepts>
+    </rule>
 </rules>

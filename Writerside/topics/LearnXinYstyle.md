@@ -1,4 +1,4 @@
-# LearnXinYstyle
+# Everything you need
 
 ```Scala
 // 1 type declaration

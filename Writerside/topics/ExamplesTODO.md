@@ -1,4 +1,4 @@
-# ExamplesTODO
+# Code examples
 
 ## Types
 ```Scala

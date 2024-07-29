@@ -63,7 +63,7 @@ Int add::Int = this + add
 With short form you can omit the return type(`-> Int`) and return statement(`^`)
 
 ## extend
-
+Syntax sugar to declare many messages for the same type
 ```Scala
 
 type Person

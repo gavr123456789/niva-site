@@ -19,16 +19,17 @@
         <toc-element topic="CodeBlocks.md"/>
         <toc-element topic="Unions.md"/>
         <toc-element topic="Enum.md"/>
-        <toc-element topic="LearnXinYstyle.md"/>
         <toc-element topic="ExamplesTODO.md">
-            <toc-element topic="TypeConstrunctors.md"/>
             <toc-element topic="String.md"/>
             <toc-element topic="Ranges.md"/>
             <toc-element topic="ControlFlow.md"/>
             <toc-element topic="Cycles.md"/>
-            <toc-element topic="CollectionsExampler.md"/>
+            <toc-element topic="CollectionsExampler.md">
+            </toc-element>
+            <toc-element topic="LearnXinYstyle.md"/>
         </toc-element>
     </toc-element>
+    <toc-element topic="Everything-you-need.md"/>
     <toc-element topic="Advanced.md">
         <toc-element topic="Common-Niva-Patterns.md"/>
         <toc-element topic="Pipes-and-Cascades.md"/>
