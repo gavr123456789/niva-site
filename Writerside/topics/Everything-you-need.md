@@ -56,6 +56,7 @@ Int to::Int = Range from: this to: to
 ```
 
 Conditions
+=> is syntax sugar for ifTrue message, since conditions is pretty common
 ```Scala
 // syntax sugar
 1 < 2 => "yay" echo
@@ -79,8 +80,18 @@ Int to::Int -> Range? = [
 1 to: 2 // Range from: 1 to: 2
 ```
 
-Matching:
+Cycles:  
+there is no special syntax for cycles
+```Scala
+{1 2 3} forEach: [ it echo ]
+1..10 forEach: [ it echo ]
 
+mut c = 10
+[c > 0] whileTrue: [ c <- c dec ]
+```
+
+Matching:
+there is special syntax for matching, since niva heavily utilize tagged unions
 ```Scala
 x = "Alice"
 // matching on x
@@ -116,6 +127,17 @@ Shape getArea -> Float =
 // all the matches will become errors until all cases processed
 ```
 
+Nullability
+```Scala
+x::Int? = null
+...TODO
+```
+
 Handling the error:
 
 
+
+Local arg names:
+```Scala
+Int from: x::Int to: y::Int = this + x + y
+```
