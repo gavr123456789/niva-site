@@ -3,11 +3,13 @@ Everything is a message
 
 ## If
 Usual if is a ifTrue message for Boolean type, that takes [codeblock](CodeBlocks.md) as argument  
-`1 < 2 ifTrue: ["obviously" echo]`  
-`1 > 2 ifFalse: ["yep" echo]`  
-`1 < 2 ifTrue: ["obviously" echo] ifFalse: ["waa!?" echo]`  
-`1 < 2 ifFalse: ["obviously" echo] ifTrue: ["waa!?" echo]`  
-The last 2 message has signature   
+```Scala
+1 < 2 ifTrue: ["obviously" echo]
+1 < 2 ifTrue: ["obviously" echo]
+1 < 2 ifTrue: ["obviously" echo] ifFalse: ["waa!?" echo]
+1 < 2 ifFalse: ["waa!?" echo] ifTrue: ["obviously" echo]
+```
+The last 2 messages have the signature:   
 `Boolean ifTrue: [ -> T] ifFalse: [ -> T] -> T` so they can be used as expressions   
 ```Scala
 config = directory exist 
@@ -24,9 +26,9 @@ Notice: codeblocks always return its last expression as value
 
 ## If syntax sugar
 Since if is quite often thing, I created syntax sugar for it:    
-`bool => expr` for `bool ifTrue: [expr]`    
+`true => expr` for `true ifTrue: [expr]`    
 and    
-`bool => expr |=> expr`for `bool ifTrue: [expr] ifTrue: [expr]`
+`true => expr |=> expr`for `true ifTrue: [expr] ifTrue: [expr]`
 
 ```Scala
 1 < 2 => "yay" echo
