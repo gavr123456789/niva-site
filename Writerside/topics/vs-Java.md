@@ -1,5 +1,5 @@
-# Everything you need
-
+# vs Java
+TODO
 
 Variable:
 
@@ -12,7 +12,17 @@ mut x = 5
 x <- 6 // mutate
 ```
 
-Type:  
+```Java
+var a = 21; 
+var b = a + a;
+String c = "string"; // type declaration is ::
+var d = true;
+var x = 5;
+x = 6;
+```
+
+
+Type:
 
 ```Scala
 type Square side: Int
@@ -20,6 +30,31 @@ type Person
     name: String
     age: Int
 ```
+
+```Java
+class Square {
+    Int side;
+    Square(Int side) {
+        this.side = side
+    }
+}
+
+public class Person {
+    public Int age;
+    public String name;
+    
+    public Square(Int age, String name) {
+        this.age = age
+        this.name = name
+    }
+    
+    @Override
+    public String toString() {
+        return "Person{ name ='" + name + "', age =" + age + " }";
+    }
+}
+```
+
 
 Create instance:
 ```Scala
@@ -30,7 +65,14 @@ alice = Person name: "Alice" age: 24
 {age name} = alice
 ```
 
-Function for type:  
+```Java 
+Square square = new Square(42);
+Person alice = new Person("Alice", 24);
+int age = alice.getAge();
+String name = alice.getName();
+```
+
+Function for type:
 
 ```Scala
 Int double = this + this
@@ -38,6 +80,25 @@ Square perimeter = side double
 
 square = Square side: 42
 square perimeter // call
+```
+
+```Java
+// there is no way to extend internal type and create method outside class
+public class IntExtensions {
+    public static int doubleValue(int value) {
+        return value + value;
+    }
+}
+
+//...
+public int doubleValue(int value) {
+    return this.side.double();
+}
+//...
+
+var square = Square(42)
+square.perimeter() // call
+
 ```
 
 Type constructor:  
@@ -118,8 +179,8 @@ union Shape =
     
 constructor Float pi = 3.14
 
-// match on this(Shape)
-Shape getArea -> Float = | this 
+Shape getArea -> Float = 
+    | this // "this" is Shape here
     | Rectangle => width * height |> toFloat
     | Circle => Float pi * radius * radius
     

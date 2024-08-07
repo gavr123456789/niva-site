@@ -29,7 +29,10 @@
             <toc-element topic="LearnXinYstyle.md"/>
         </toc-element>
     </toc-element>
-    <toc-element topic="Everything-you-need.md"/>
+    <toc-element topic="Everything-you-need.md">
+        <toc-element topic="vs-Typescript.md"/>
+        <toc-element topic="vs-Java.md"/>
+    </toc-element>
     <toc-element topic="Advanced.md">
         <toc-element topic="Common-Niva-Patterns.md"/>
         <toc-element topic="Pipes-and-Cascades.md"/>
