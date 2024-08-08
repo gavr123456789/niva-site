@@ -1,6 +1,6 @@
 # Mutability
 There is 2 types of mutability:
-1) Variable mutability(let const in JS)
+1) Variable mutability(let const in JS or var val in Kotlin)
 2) Type mutability (fields of type are immutable)
 
 ## Variable mutability
@@ -13,7 +13,7 @@ y <- y inc
 
 ## Type mutability
 
-By default all types are immutable and mutating a field creates shadow copy  
+By default, all types are immutable and mutating a field creates shadow copy  
 
 ```Scala
 type Person 
@@ -45,8 +45,9 @@ p name: "Bob" // p mutated
 ## Errors
 So that you don't confuse the mutation of the field 
 with the creation of a shadow copy:  
-If you forget to use result of shadow copy it will be an error
 ```Scala
+// If you forgot to use result of shadow copy it will be an error
+
 p = Person name: "Alice" age: 32
 p name: "Bob" // ERROR
 ```

@@ -5,7 +5,7 @@ Everything is a message
 Usual if is a ifTrue message for Boolean type, that takes [codeblock](CodeBlocks.md) as argument  
 ```Scala
 1 < 2 ifTrue: ["obviously" echo]
-1 < 2 ifTrue: ["obviously" echo]
+1 > 2 ifFalse: ["obviously" echo]
 1 < 2 ifTrue: ["obviously" echo] ifFalse: ["waa!?" echo]
 1 < 2 ifFalse: ["waa!?" echo] ifTrue: ["obviously" echo]
 ```
