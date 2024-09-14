@@ -1,23 +1,13 @@
 # Basic Syntax
 
 
+## Hello world is one liner
 ```Scala
 "Hello world" echo
 ```
 
 `niva run main.niva`  
 Instead of `echo("Hello world")` we use `"Hello world" echo`
-
-
-
-
-## Message send
-
-Everything in niva except the type declaration is a message sending, kinda like lisp, but no parentheses and typed.
-
-So, let's get familiar with message syntax.
-
-
 
 // add badge
 To run the code, create a file main.niva and run it with `niva run`  

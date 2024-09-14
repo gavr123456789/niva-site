@@ -36,7 +36,7 @@ So you can have many producers and one consumer, meaning nothing specific about 
 
 ```Scala
 isSHA = [
-    x = "a/b/c/d
+    x = "a/b/c/d"
     y = FileSystem readAll: x
     y contains: "SHA"
 ] do

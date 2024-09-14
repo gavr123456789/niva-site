@@ -1,25 +1,38 @@
 # Installation
+There are 2 way to install it, the JVM and Native.  
+JVM is much easier but will compile 10-30% slower.
 
 ## Compile from sources
-P.S. u can find binary releases in the releases  
-After running compile.sh you will get niva_compiler folder that contains jvm or native binary.
 
-### JVM
+### sh script
+#### JVM
 1) `sh compile.sh jvm`
 2) run compiler from bin folder
-### Native
+#### Native
 1) install graalvm `yay -S jdk21-graalvm-bin` and set it default: `sudo archlinux-java set java-21-graalvm` on Arch, `nix shell nixpkgs#graalvm-ce` on nix
 2) `sh compile.sh bin`
-### Usage
 
-Niva can eat .niva and .scala files, because Scala highlight fits well for Niva :3
-`niva main.niva` - compile and run  
-`niva main.niva -с` - compile only, will create binary for native target and fat-jar for jvm
-`niva main.niva -i > info.md` - will generate info about all code base of the projects, `-iu` - only user defined files
-`niva run` - run all files in current folder with main.niva as entry point
-`niva build` - same as run but produce binary
+### Gradle
+If you have graalvm in your JAVA_HOME then inside /Niva/Niva/Niva folder run:  
+`./gradlew buildNativeNiva` this will create native binary in ~/.niva/bin  
+`./gradlew buildJvmNiva` this will create jvm based binary in ~/.niva/niva/bin
 
-[VS Code plugin](https://github.com/gavr123456789/niva-vscode-bundle) for syntax highlighting
+#### How to install GraalVM
+Arch: `yay -S jdk22-graalvm-bin`  
+`archlinux-java status`  
+`archlinux-java set <JAVA_ENV_NAME>`  
+[select java on arch](https://wiki.archlinux.org/title/Java#Switching_between_JVM)
+
+macOS: `brew install --cask graalvm-jdk`  
+`/usr/libexec/java_home -V`  
+`export JAVA_HOME='/usr/libexec/java_home -v 22.0.2'`  
+[select java on mac os](https://stackoverflow.com/questions/21964709/how-to-set-or-change-the-default-java-jdk-version-on-macos)  
+If you have `expanded from macro 'NS_FORMAT_ARGUMENT'` problem with buildNativeNiva on macOS then [update XCode](https://wails.io/docs/guides/troubleshooting/#my-mac-app-gives-me-weird-compilation-errors)
+`xcode-select -p && sudo xcode-select --switch /Library/Developer/CommandLineTools`
+
 
 ## Get binaries from releases
 TODO
+
+
+
