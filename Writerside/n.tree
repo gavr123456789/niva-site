@@ -15,6 +15,7 @@
     <toc-element topic="Basic.md">
         <toc-element topic="Message-Send.md"/>
         <toc-element topic="Variables.md"/>
+        <toc-element topic="Collection.md"/>
         <toc-element topic="Type-declaration.md"/>
         <toc-element topic="Message-Declaration.md"/>
         <toc-element topic="Constructors.md"/>
