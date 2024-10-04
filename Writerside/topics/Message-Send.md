@@ -37,19 +37,13 @@ So every call has a receiver that receive "message"
 `1 inc factorial`  
 `receiver <- message1 <- message2`
 
-
-
-Here is a more complex example:
-```Scala
-TODOOOOOOOOOOOOOOOOOOOO
-```
-
 There are three kinds of messages.  
 You are already familiar with unary, it has one arg(it's receiver).  
 But what if we need more args?
 
 ### Keyword
-//This is the most common way to send messages
+> This is the most common way to send messages
+{style="note"}
 
 What about sending messages with arguments?   
 `1 add 2`  
@@ -76,7 +70,7 @@ In C like languages there is a concept of calling functions with named arguments
 `...`  
 So in niva name of the function and name of the arguments are the same
 
-// TODO пикча из презентации пхаро
+![pharoKWSyntax.png](pharoKWSyntax.png)
 
 ### Binary
 Binary messages is a pretty common syntax:

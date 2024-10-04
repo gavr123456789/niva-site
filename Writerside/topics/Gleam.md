@@ -140,42 +140,4 @@ There are plans to add structural typing(but that will require some runtime cost
         x = "1"
         1 + x // Same
     </code-block>
-</compare>
-
-## String
-<compare>
-    <code-block lang="Scala">
-        // String literals
-        io.debug("👩‍💻 こんにちは Gleam 🏳️‍🌈")
-        io.debug(
-            "multi
-            line
-            string",
-        )
-        io.debug("\u{1F600}")
-        // Double quote can be escaped
-        io.println("\"X\" marks the spot")
-        // String concatenation
-        io.debug("One " <> "Two")
-        // String functions
-        io.debug(string.reverse("1 2 3 4 5"))
-        io.debug(string.append("abc", "def"))
-    </code-block>
-    <code-block lang="Scala">
-        // String literals
-        "👩‍💻 こんにちは Gleam 🏳️‍🌈" echo
-        """multi
-        line
-        string""" echo
-        "\u{1F600}" echo // TODO check
-        // Double quote can be escaped
-        io.println("\"X\" marks the spot")
-        // String concatenation
-        "One " <> "Two"
-        // String functions
-        string.reverse("1 2 3 4 5")
-        string.append("abc", "def")
-    </code-block>
-</compare>
-
-
+</compare>  
