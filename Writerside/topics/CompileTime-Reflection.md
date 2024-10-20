@@ -5,7 +5,6 @@ You can get the names of the arguments with
 It can be really helpful to create cool debug and assert messages.
 
 ```Scala
-TODO print debug
 T debug -> T = [
     receiverName = Compiler getName: 0
     value = this toString
@@ -14,9 +13,29 @@ T debug -> T = [
 ]
 x = 5
 x debug // "x = 5"
-
-TODO assert
 ```
+
+This assert will print both the expressions and its values if fail.  
+
+```Scala
+type Assert 
+
+constructor Assert that::Any equals::Any -> Unit! = [
+  a = Compiler getName: 1
+  b = Compiler getName: 2
+
+  that != equals => [
+    Error throwWithMessage: "Assertion failed: $a' != $b' ($that != $equals)"
+  ]
+]
+// Try it yourself with
+x = 4
+Assert that: x equals: 1 inc inc
+
+// Very usefull for testing
+```
+
+
 
 ```Scala
 type Tape pos: Int

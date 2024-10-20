@@ -8,7 +8,7 @@ Declaration of union is like declaration of `type` + switch
 ```Scala
 union Shape =
     | Rectangle width: Int height: Int
-    | Circle    radius: Int
+    | Circle    radius: Double
 ```
 
 ## Pattern match
@@ -17,12 +17,13 @@ Switch syntax is used for this.
 
 
 ```Scala
-constructor Float pi = 3.14
+constructor Double pi = 3.14
+Double square = this * this
 
-Shape getArea -> Float = 
+Shape getArea -> Double = 
     | this // "this" is Shape here
-    | Rectangle => width * height |> toFloat
-    | Circle => Float pi * radius * radius
+    | Rectangle => width * height |> toDouble
+    | Circle => Double pi * radius square
 ```
 
 ## Exhaustive
@@ -30,25 +31,29 @@ If you don't check all form options, this will be a compile time error.
 
 ```Scala
 
-Shape getArea -> Float = 
-    | this // "this" is Shape here
-    | Rectangle => width * height |> toFloat
-//  | Circle => Float pi * radius * radius
+Shape getArea -> Double = 
+    | this 
+    | Rectangle => width * height |> toDouble
+//  | Circle => Double pi * radius square
+//  Not all possible variants have been checked (Circle)
 ```
 
 ## Instantiate
 It is impossible to instantiate the root of the union, 
 since then it is not clear what form it will correspond to.  
-But you can create branches, each root branch is no different 
+
+But you can create branches, each union branch is no different 
 from a regular type declaration.
 
 ```Scala
 x = Rectangle width: 2 height: 3
 x getArea echo
 ```
-// TODO as note  
-Note that you don't need the root qualifier like `Shape.Rectangle`.
+> Note that you don't need the root qualifier like `Shape.Rectangle`  
 This is debatable, but I like the branches to be no different from the declaration of ordinary top-level types
+{style="note"}
+
+
 ## Single line syntax
 
 ```Scala
@@ -77,15 +82,15 @@ Printer printPerson: p::Person =
 
 ## Include one union into another
 
-// TODO tree picture
+```C
+union Vehicle = 
+    | ^Car
+    | Plane
+    | Ship
 
-// TODO replace with car models
-```Scala
-union Sas = Sus | Ses
-union Sus =
-    | Sos 
-    | ^Sas // include Sas as Sus branch
+union Car = RaceCar | Truck | PassengerCar
 ```
+Now Vehicle is Car | Plane | Ship or RaceCar | Truck | PassengerCar | Plane | Ship
 
 So now u can pattern match it like 
 ```Scala
@@ -111,5 +116,7 @@ check out more general branches before more specific ones
 | Sus => ... // So Sus is unreachable here
 ```
 
-// TODO error text
+## Homework
+Create a well known example with Cat Dog, all of them are Animal. 
+Animal can eat food. Food are Meat or Vegetable
 

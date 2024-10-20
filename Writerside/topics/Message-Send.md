@@ -51,6 +51,30 @@ okay, but what if we have more args
 this is pretty unreadable, so we need to distinguish each arg  
 `1 add: 2`  
 `widget widgh: 250 height: 250`  
+
+So  
+`receiver keyword1: arg1 keyword2: arg2`  
+equivalent to C like syntax  
+`receiver.keyword1keyword2(arg1, arg2)`  
+
+Here you can see why I think named arguments are better than positional:
+1) replaceAll " " "-" test, it's nearly impossible to guess what's going on here
+2) All the functions in niva have receivers, because they are actually messages(Smalltalk term). So its just much easier to get a list of all possible messages with autocomplition on any value and understand what they mean too:  
+```Scala
+    charAt 0 it 
+    // vs
+    it at: 0
+    
+    replaceAll " " "-" text
+    // vs
+    text replace: " " with: "-"
+```
+![compareWithUnison.png](compareWithUnison.png)
+> Ofc its cheating since I niva version can throw on `it first` message, but my point is not about the length.
+{style="note"}
+
+
+
 If you need to compose keyword msgs inside each other use (), also you can put args on new lines:   
 ```Scala
 widget 
@@ -63,13 +87,13 @@ widget
 "12.09.2024" replace: "." with: "-"
 1 to: 5 do: [ it echo ] // 12345
 ```
+
+
 In C like languages there is a concept of calling functions with named arguments  
 `...`  
 So in niva name of the function and name of the arguments are the same
 
-`receiver keyword1: arg1 keyword2: arg2`
-equivalent to C like syntax
-`receiver.keyword1keyword2(arg1, arg2)`
+
 
 ### Binary
 Binary messages is a pretty common syntax:

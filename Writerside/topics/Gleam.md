@@ -1,5 +1,5 @@
 # Gleam
-
+Not finished
 <compare>
     <code-block lang="Scala">
         import gleam/io
@@ -50,7 +50,6 @@
 </compare>
 
 ## Ints
-TODO MAX  
 unary > binary > keyword, so we need parentheses here  
 over-vice it would be  
 `1 + 1 echo` == `1 + (1 echo)` and `1 + Unit` is a type mismatch
@@ -81,9 +80,8 @@ over-vice it would be
 </compare>
 
 ## Floats
-TODO add MAX and catching / 0  
 
-We dont need to use +. because niva type system is not Hindley-Mindler.  
+We don't need to use +. because niva type system is not Hindley-Mindler.  
 Every message has a receiver, so there + for Float and + Int types. 
 <compare>
     <code-block lang="Scala">
