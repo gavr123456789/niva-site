@@ -15,7 +15,6 @@
     <toc-element topic="Basic.md">
         <toc-element topic="Message-Send.md"/>
         <toc-element topic="Variables.md"/>
-        <toc-element topic="Collection.md"/>
         <toc-element topic="Type-declaration.md"/>
         <toc-element topic="Message-Declaration.md"/>
         <toc-element topic="Constructors.md"/>
@@ -24,6 +23,7 @@
         <toc-element topic="CodeBlocks.md"/>
         <toc-element topic="Unions.md"/>
         <toc-element topic="Enum.md"/>
+        <toc-element topic="Collection.md"/>
         <toc-element topic="ExamplesTODO.md">
             <toc-element topic="String.md"/>
             <toc-element topic="Ranges.md"/>

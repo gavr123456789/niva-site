@@ -30,7 +30,7 @@ alice = Person name: "Alice" age: 24
 {age name} = alice
 ```
 
-Function for type:  
+Method for type:  
 
 ```Scala
 Int double = this + this
@@ -67,17 +67,6 @@ Conditions
 1 > 2 => "yay" echo |=> "oh no" echo
 
 1 > 2 ifTrue: ["yay" echo] ifFalse: ["oh no" echo]
-
-type Range 
-    from: Int 
-    to: Int
-
-Int to::Int -> Range? = [
-  this > to => ^ null 
-  ^ Range from: this to: to
-]
-
-1 to: 2 // Range from: 1 to: 2
 ```
 
 Cycles:  
