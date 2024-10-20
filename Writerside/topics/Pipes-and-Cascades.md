@@ -1,5 +1,5 @@
 # Pipes and Cascades
-// TODO
+
 ## Pipes
 You can chain kw messages with pipes  
 `1 from: 2 to: 3` is single message with two arguments  

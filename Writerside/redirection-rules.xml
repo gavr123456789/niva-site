@@ -62,4 +62,8 @@
         <description>Created after removal of "TypeConstructors" from niva</description>
         <accepts>TypeConstrunctors.html</accepts>
     </rule>
+    <rule id="5ce23afd">
+        <description><![CDATA[Created after removal of "<vs-Typescript.md>" from niva]]></description>
+        <accepts>vs-Typescript.html</accepts>
+    </rule>
 </rules>

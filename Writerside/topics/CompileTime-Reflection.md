@@ -1,5 +1,4 @@
 # CompileTime Reflection
-// TODO
 
 You can get the names of the arguments with 
 `Compiler getName: numberOfArgument` message.

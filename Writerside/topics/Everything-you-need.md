@@ -1,4 +1,4 @@
-# Everything you need
+# LearnXinY style
 
 
 Variable:

@@ -89,16 +89,29 @@ unary always evaluate first,
 
 Here are some examples that became looks like DSL because of that rule:
 ```Scala
-TODOOOOOOOOOOOOOOOOOOOO
-Date
-...
-Colors for text
+// Pharo
+'http://www.pharo.org' asUrl retrieveContents
+('2014-07-01' asDate - '2013/2/1' asDate) days
+// niva
+42 factorial echo
+// Colors for text, just unary messages
+"Hello"red + " World"purp + "!"cyan 
+"(1969-07-20" split: "-") reversed |> joinWith: "/"
+// {"1969" "07" "20"} - { "20" "07" "1969" } - "20/07/1969"
 ```
 
-## Send keyword to keyword
+## Send keyword to result of another keyword  
+What if you want to send `to:` kw msg to the result of`from:`  
+`1 from: 2 to: 3`  
 
-`1 from: 2 to: 3`
-Is
+This is just a single msg `from: to:` so you need to put the first part into parenthesis:  
+`(1 from: 2) to: 3`  
 
+With more calls it starts to get messy:  
+`((1 from: 2) to: 3) and: 4`  
+kinda like in C, but the amount of parenthesis grow on the left side:  
+`and(4, to(3, from(1, 2)))`   
 
-
+So I added pipe operator, which wraps everything to the left in brackets  
+`1 from: 2 |>  to: 3 |> and: 4`  
+More on that here: [pipes](Pipes-and-Cascades.md)
