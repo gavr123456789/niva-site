@@ -23,10 +23,10 @@ And now invert, to make it readable:
 
 Now we got niva syntax!
 ```Scala
-1 inc inc == 3
-5 factorial == 20
-"Hello" count == 5
-"Hello" reverse == "olleH"
+1 inc inc // 3
+5 factorial // 20
+"Hello" count // 5
+"Hello" reversed // "olleH"
 ```
 
 Some ML languages use pipe operators to achieve the same readability  
@@ -35,6 +35,7 @@ Some ML languages use pipe operators to achieve the same readability
 
 So every call has a receiver that receive "message"  
 `1 inc factorial`  
+can be read as:  
 `receiver <- message1 <- message2`
 
 There are three kinds of messages.  
@@ -46,20 +47,28 @@ But what if we need more args?
 
 What about sending messages with arguments?   
 `1 add 2`  
-okay, but what if we have more args  
-`1 addMany 2 3 4 add 2`  
-this is pretty unreadable, so we need to distinguish each arg  
-`1 add: 2`  
-`widget widgh: 250 height: 250`  
+Okay, but what if we have more args  
+`1 addFirst 2 addSecond 3`  
+This is pretty unreadable, so we need to distinguish each arg  
+```Scala
+1 add: 2
+widget 
+  widgh: 400
+  height: 250
+```
 
-So  
+So function calls in niva are always named:  
 `receiver keyword1: arg1 keyword2: arg2`  
-equivalent to C like syntax  
+equivalent to C/Java positional based syntax:  
 `receiver.keyword1keyword2(arg1, arg2)`  
 
-Here you can see why I think named arguments are better than positional:
-1) replaceAll " " "-" test, it's nearly impossible to guess what's going on here
-2) All the functions in niva have receivers, because they are actually messages(Smalltalk term). So its just much easier to get a list of all possible messages with autocomplition on any value and understand what they mean too:  
+Here you can see why I think named arguments are better than positional ones:
+
+![compareWithUnison.png](compareWithUnison.png)  
+
+1) `replaceAll " " "-" test`, it's nearly impossible to guess what's going on here
+2) All the functions in niva have receivers, because they are actually messages(Smalltalk term). 
+So it's just much easier to get a list of all possible messages with auto-completion on any value and understand what they mean too:  
 ```Scala
     charAt 0 it 
     // vs
@@ -69,7 +78,6 @@ Here you can see why I think named arguments are better than positional:
     // vs
     text replace: " " with: "-"
 ```
-![compareWithUnison.png](compareWithUnison.png)
 > Ofc its cheating since I niva version can throw on `it first` message, but my point is not about the length.
 {style="note"}
 
@@ -127,11 +135,26 @@ Here are some examples that became looks like DSL because of that rule:
 #(1 2 3) intersect: #(3 4 5) // #(3)
 ```
 
+----
+
+So, the general rule is simple, every expression in niva is a message, and all the messages works the same way:  
+`receiver <- message1 <- message2`  
+
+```Scala
+1 inc // 1 is a receiver and inc is a message it receives
+// 1 <- inc
+1 from: 2 to: 3 // 1 receives message "from:to:"
+// 1 <- from:to:
+1 + 2 + 3 // 1 receives 2 messages +2 and +3
+// 1 <- + 2 <- + 3
+```
+
 ## Send keyword to result of another keyword  
-What if you want to send `to:` kw msg to the result of`from:`  
+There is easy to do it with unary and binary: `1 + 2 + 3`, `1 inc inc`  
+But with keyword what if you want to send `to:` kw msg to the result of`from:`  
 `1 from: 2 to: 3`  
 
-This is just a single msg `from: to:` so you need to put the first part into parenthesis:  
+This is just a single msg `from: to:` to solve this you need to put the first part into parenthesis:  
 `(1 from: 2) to: 3`  
 
 With more calls it starts to get messy:  

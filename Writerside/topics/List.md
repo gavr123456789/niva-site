@@ -10,6 +10,11 @@ To create an empty list you need to specify the type, because its impossible to 
 ```Scala
 x::MutableList::Int = {}
 ```
+You can put messages inside collection with braces:
+```Scala
+collectionWithMessages = {(1 inc) (2 inc) (3 inc inc)}
+// {2 3 5}
+```
 
 ## Accessing elements
 Indexing starts from 0, like in most programming languages
@@ -38,20 +43,46 @@ list = {1 2 3}
 list add: 4
 list echo
 ```
+Add all elements of another collection
+```Scala
+list addAll: {4 5 6}
+
+```
 
 You can add elements into specific places with `at: Int put: T` message:
 ```Scala
 list = {1 2 3}
-list at: 2 put: 4 
+list at: 2 put: 4 // C-like: list[2] = 4
 // {1 2 4}
 ```
 
 ## Common messages
 ```Scala
-list add: 4
-list at: 0 put: 42 // C-like: list[0] = 42
-newList = list map: [x -> x toString + "s"]
-emptyList::MutableList::Int = {}
-// you can put messages inside collection with braces
-collectionWithMessages = {(1 inc) (2 inc) (3 inc inc)}
+list = {1 2 3}
+list count // 3
+isThere2 = list contains: 2
+
+llist map: [it toString + "s"]
+list filter: [it % 2 == 0]
+list chunked: 2 // {{1 2} {3}}
+list reversed
+list shuffled
+list find: [it % 2 == 0] // find element, retunrs nullable T?
+list firstOrNull // get first item
+list firstOrNull: [it % 2 == 0] // find first item
+list indexOfFirst: [it % 2 == 0] // find first index by condition
+list indexOfLast: [it % 2 == 0] // find first index by condition
+```
+To get all of them run `niva info > info.md`
+
+## Lazy
+If you wanna run many processing messages like `map:` `filter:` on the collection it's better to transform it to sequence.  
+Then, instead of creating intermediate collections, actions will be performed on each element separately.
+```Scala
+    list = {1 2 3 4 5 6 7}
+    str = list asSequence |>
+        filter: [it % 2 == 0] |> 
+        map: [it * 10] |>
+        joinTransform: [it + it |> toString]
+    // 40, 80, 120
 ```

@@ -1,5 +1,5 @@
 # Gleam
-Not finished
+Not finished!
 <compare>
     <code-block lang="Scala">
         import gleam/io

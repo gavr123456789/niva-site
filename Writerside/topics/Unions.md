@@ -1,6 +1,6 @@
 # Unions
 
-Tagged unions are the main way to achieve polymorphism in niva
+Tagged unions are the main way to achieve polymorphism in niva.
 
 Unions are types that can be represented by one of several options at a time.
 
@@ -94,27 +94,40 @@ Now Vehicle is Car | Plane | Ship or RaceCar | Truck | PassengerCar | Plane | Sh
 
 So now u can pattern match it like 
 ```Scala
-| sas
-| Sos => ...
-| Sus => ...
-| Ses => ...
+Vehicle printSpeed = | this
+    | Car =>   "medium" echo
+    | Plane => "fast" echo
+    | Ship =>  "slow" echo
+```
+Inside Car branch we can match each Car branch:
+```Scala
+Vehicle printSpeed2 = | this
+    | Plane => "fast" echo
+    | Ship =>  "slow" echo
+    | Car => [
+        | this
+        | RaceCar => "fast" echo
+        | Truck => "slow" echo
+        | PassengerCar => "medium" echo
+    ]
+```
+Or the last variant - plain match on every branch:
+```Scala
+Vehicle printSpeed3 = | this
+    | Plane => "fast" echo
+    | Ship => "slow" echo
+    // Car
+    | RaceCar => "fast" echo
+    | Truck => "slow" echo
+    | PassengerCar => "medium" echo
 ```
 
-Or on more general `Sas`
-```Scala
-| sas
-| Sos => ...
-| Sas => ...
-```
+## IDE support
+You can try to send `match` message to any value of union root type to 
+generate all the branches for pattern matching.  
+Or match deep to generate matching for every possible nested branch too, like in the last
+example
 
-You will get a compilation error if you inadvertently 
-check out more general branches before more specific ones
-```Scala
-| sas
-| Sos => ...
-| Sas => ... // Sas is more general than Sus
-| Sus => ... // So Sus is unreachable here
-```
 
 ## Homework
 Create a well known example with Cat Dog, all of them are Animal. 

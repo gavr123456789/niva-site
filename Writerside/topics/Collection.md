@@ -1,5 +1,9 @@
 # Collections
 
+- [](List.md)  
+- [](Set.md)  
+- [](Map.md)  
+
 TODO
 
 ## Lists
