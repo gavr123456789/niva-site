@@ -78,7 +78,7 @@ So it's just much easier to get a list of all possible messages with auto-comple
     // vs
     text replace: " " with: "-"
 ```
-> Ofc its cheating since I niva version can throw on `it first` message, but my point is not about the length.
+> Ofc its cheating since niva version has `it first` unhandled, but my point is not about the length here
 {style="note"}
 
 

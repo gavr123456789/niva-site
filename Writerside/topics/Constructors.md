@@ -58,7 +58,13 @@ p = Point new
 constructor Point x::Int = Point x: x y: 0
 // or with only one argument set to 0
 p = Point x: 0 // y is 0 here
+```
+## Many constructors sugar
+You can define many constructors for the same type:
 
-
-
+```Scala
+constructor Point [
+    on new = Point x: 0 y: 0
+    on x::Int = Point x: x y: 0
+]
 ```

@@ -1,5 +1,6 @@
 # Error effects handling
 
+TODO rewrite
 
 ## Raising errors
 
@@ -35,7 +36,7 @@ Its kinda errors as values + exception in one thing.
 3) You can force catching all possible errors if you define empty errors list: `-> Int![]`
 
 If method can throw error you need to mark its return type other-vice it will be a compile time error.  
-// TODO screenshot of such error
+
 ```Scala
 // ERROR not all possible errors mentioned use "-> Int!Error1"
 Int sus -> Int = [ 
