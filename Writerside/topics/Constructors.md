@@ -39,3 +39,26 @@ Constructors are very similar to static methods,
 but note that there are no static fields, it is impossible to create 
 a global state.
 
+## Default arguments pattern
+Since there is no default argument, you can simulate them with additional methods:
+
+```Scala
+type Point
+    x: Int
+    y: Int
+    
+p = Point x: 0 y: 0
+// but I dont want to set the fields each time
+// we can make a custom constructor
+
+constructor Point new = Point x: 0 y: 0
+// now we can create it just with single new message
+p = Point new
+
+constructor Point x::Int = Point x: x y: 0
+// or with only one argument set to 0
+p = Point x: 0 // y is 0 here
+
+
+
+```
