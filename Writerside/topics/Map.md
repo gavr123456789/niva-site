@@ -3,7 +3,7 @@
 A collection that holds pairs of objects (keys and values) and supports 
 efficiently retrieving the value corresponding to each key.  
     
-Literal for MutableSet is `#{1 "one" 2 "two"}` or `#{1 "one", 2 "two"}` because its hash based
+Literal for MutableMap is `#{1 "one" 2 "two"}` or `#{1 "one", 2 "two"}` because its hash based
 
 ## Creating map
 ```Scala
