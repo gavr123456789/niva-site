@@ -1,7 +1,7 @@
 # Set
 
 A generic unordered collection of elements that does not support duplicate elements, and supports adding and removing elements.  
-Literal for MutableSet is `#(1 2 3)` 
+Literal for MutableSet is `#(1 2 3)` because its hash based
 
 ## Creating set
 ```Scala
@@ -12,9 +12,11 @@ It's possible to create new set from the two others by by addition, subtraction 
 sum = #(1 2 3) + #(3 4) // $(1 2 3 4)
 sub = #(1 2 3) - #(4 5) // #() 
 intersect = #(1 2 3) intersect: #(2 3 4) // #(2 3)
-
 ```
-
+You can also correctly compare sets with `==` `!=`
+```Scala
+#(1 2 3) == #(1 2 3) // true
+```
 ## Accessing elements
 You cant access elements by index, since order of 
 elements is not the same.  
@@ -23,10 +25,11 @@ But you can iterate over set the same way as over list:
 ```Scala
 #{1 2 3 3 4} forEach: [it echo] 
 ```
+
 ## Mutation
 ```Scala
 set = #(1 2 3)
-set add
+set add: 4
 
 set clear // #()
 ```

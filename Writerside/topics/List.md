@@ -66,12 +66,14 @@ llist map: [it toString + "s"]
 list filter: [it % 2 == 0]
 list chunked: 2 // {{1 2} {3}}
 list reversed
-list shuffled
+list shuffled // usefull for solitaire implementation
 list find: [it % 2 == 0] // find element, retunrs nullable T?
 list firstOrNull // get first item
 list firstOrNull: [it % 2 == 0] // find first item
 list indexOfFirst: [it % 2 == 0] // find first index by condition
 list indexOfLast: [it % 2 == 0] // find first index by condition
+list clear // remove all elements
+
 ```
 To get all of them run `niva info > info.md`
 
