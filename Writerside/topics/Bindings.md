@@ -1,6 +1,8 @@
 # Bindings
 
-TODO
+- [](Files.md)
+- [](Server.md)
+- [](GTK-UI.md)
 
 
 ## @rename:

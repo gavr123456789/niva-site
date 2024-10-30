@@ -1,5 +1,8 @@
 # Error effects handling
 
+Errors in go
+https://x.com/zack_overflow/status/1850620600882258374  
+
 TODO rewrite
 
 ## Raising errors
