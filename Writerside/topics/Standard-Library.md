@@ -6,8 +6,5 @@ What happens when you compile code containing file reading in JS or WASM and run
 
 Currently, you can access all necessary functions by adding a file with bindings to your project.  
 A list of such files can be found here:
-https://github.com/gavr123456789/bazar/tree/main/Bindings
+[https://github.com/gavr123456789/bazar/tree/main/Bindings](https://github.com/gavr123456789/bazar/tree/main/Bindings)  
 
-- okio – for filesystem operations
-- kotlinx.serialization.json – for JSON
-- gtk – for GUI

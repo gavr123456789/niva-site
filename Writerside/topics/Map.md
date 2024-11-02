@@ -8,6 +8,8 @@ Literal for MutableMap is `#{1 "one" 2 "two"}` or `#{1 "one", 2 "two"}` because 
 ## Creating map
 ```Scala
 map = #{1 "one" 2 "two"}
+// empty map is 
+map::MutableMap(Int, String) = #{}
 ```
 
 ## Accessing elements

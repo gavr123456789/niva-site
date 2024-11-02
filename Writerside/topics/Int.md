@@ -4,7 +4,7 @@
 ```Scala
 echo -> Unit
 ```
-increments the number by 1
+increments the number by 1  
 1 inc == 2
 ```Scala
 inc -> Int

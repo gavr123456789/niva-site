@@ -25,7 +25,8 @@ constructor Assert that::Any equals::Any -> Unit! = [
   b = Compiler getName: 2
 
   that != equals => [
-    Error throwWithMessage: "Assertion failed: $a' != $b' ($that != $equals)"
+    msg = "Assertion failed: $a' != $b' ($that != $equals)"
+    Error throwWithMessage: msg
   ]
 ]
 // Try it yourself with
@@ -36,7 +37,7 @@ Assert that: x equals: 1 inc inc
 ```
 
 
-
+Try to run this:
 ```Scala
 type Tape pos: Int
 
