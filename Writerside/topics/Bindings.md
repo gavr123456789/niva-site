@@ -5,7 +5,7 @@ https://github.com/gavr123456789/bazar/tree/main/Bindings
 
 ## Simple example
 To bind some external types and methods we use internal `Bind package:content:` method.  
-Lets imagine we need to bind a type Person from Java.  
+Let's imagine we need to bind a type Person from Java.  
 ```Java
 package org.person
 
@@ -96,6 +96,7 @@ Bind package: "org.person" content: [
         on sayHello -> Unit
         on changeAge::Int -> Unit
         // your variant of `public boolean isAdult(int legalAge)`
+        @rename: "introduceFriend" // real name of the Java function
         on introduceFriend::String withAge::Int -> Unit
     ] 
 ] fields: [
@@ -118,6 +119,10 @@ not: `HttpClient send::Request handler::Handlers` !=
 `send:handler:` will be transformed to `sendHandler` function, but we need just `send`.  
 
 ## @emit:
+`@emit: "code"` will directly emit some backend lang code, kinda like asm pragma from C.  
+This can be useful in some corner cases when just renaming with `@rename:` is not enough.  
+
+### Bind a function without receiver
 Since everything in niva should have a receiver, here is a common approach on binding functions without receiver:
 1) create fake type
 2) create the constructor
@@ -132,3 +137,51 @@ Bind package: "kotlin.io" content: [
     // from niva: Console readln
 ]
 ```
+There is no such type as Console in Kotlin, but it looks pretty good still.
+
+### change args order
+Sometimes it can be useful to change the order of arguments, for example to bind a function for the type of the first real argument.  
+Or just to make a better api with some shortcuts like here.  
+For example look at this binding:
+
+```Scala
+  @emit: "$0.redirectOutput(ProcessBuilder.Redirect.INHERIT).redirectError(ProcessBuilder.Redirect.INHERIT)"
+  ProcessBuilder redirectOutput -> Unit
+```
+$0 means the receiver of the method, in this case its ProcessBuilder.   
+`$1` `$2` etc. is for other arguments by position.  
+These numbers are checked at compile time. 
+So a single
+```Scala
+p = ProcessBuilder command: {"gcc" "--help"} 
+p redirectOutput
+```
+will generate: 
+```Kotlin
+val p = ProcessBuilder(litsOf("gcc", "--help"))
+p.redirectOutput(ProcessBuilder.Redirect.INHERIT).redirectError(ProcessBuilder.Redirect.INHERIT)
+```
+
+Full file:
+```Scala
+Bind package: "java.lang" content: [
+  type ProcessBuilder command: MutableList::String
+
+  @emit: "ProcessBuilder($1).directory(java.io.File($2))"
+  constructor ProcessBuilder command::List::String dir::String -> Unit
+
+  type Process 
+  
+  ProcessBuilder start -> Process
+  
+  @emit: "$0.redirectOutput(ProcessBuilder.Redirect.INHERIT).redirectError(ProcessBuilder.Redirect.INHERIT)"
+  ProcessBuilder redirectOutput -> ProcessBuilder
+  
+  Process waitFor -> Int
+
+  @emit: """System.getProperty("user.dir")"""
+  constructor Process currentDir -> String
+]
+
+```
+
