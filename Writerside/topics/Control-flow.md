@@ -2,16 +2,26 @@
 Everything is a message
 
 ## If
-Usual if is a ifTrue message for Boolean type, that takes [codeblock](CodeBlocks.md) as argument  
+Usual if is a `ifTrue:` message for Boolean type, that takes [codeblock](CodeBlocks.md) as argument.
+There is 4 messages with all possible combination.
+The most common to use is `ifTrue:ifFalse:`
 ```Scala
-1 < 2 ifTrue: ["obviously" echo]
-1 > 2 ifFalse: ["obviously" echo]
-1 < 2 ifTrue: ["obviously" echo] ifFalse: ["waa!?" echo]
-1 < 2 ifFalse: ["waa!?" echo] ifTrue: ["obviously" echo]
+1 < 2 ifTrue: [1 echo]
+1 > 2 ifFalse: [2 echo]
+1 > 2 ifTrue: [3 echo] ifFalse: [4 echo]
+1 < 2 ifFalse: [5 echo] ifTrue: [6 echo]
 ```
+Try to say what numbers will be printed.  
+
 The last 2 messages have the signature:   
 `Boolean ifTrue: [ -> T] ifFalse: [ -> T] -> T` so they can be used as expressions   
+Which means that the last expression of each branch is returned as a result.  
+In the first example x will be equal 1:  
 ```Scala
+// simple
+x = true ifTrue: [1] ifFalse: [2]
+
+// `exist` returns type Boolean, so we can send ifTrue:ifFalse: to it
 config = directory exist 
     ifTrue: [ directory / "config.conf" |> readAll ]
     ifFalse: [ 
@@ -21,6 +31,7 @@ config = directory exist
         content
     ]
 ```
+
 In this theoretical program we are getting content of the config file if it exists or create it if not.  
 Notice: codeblocks always return its last expression as value  
 

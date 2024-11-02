@@ -60,27 +60,7 @@ widget
 So function calls in niva are always named:  
 `receiver keyword1: arg1 keyword2: arg2`  
 equivalent to C/Java positional based syntax:  
-`receiver.keyword1keyword2(arg1, arg2)`  
-
-Here you can see why I think named arguments are better than positional ones:
-
-![compareWithUnison.png](compareWithUnison.png)  
-
-1) `replaceAll " " "-" test`, it's nearly impossible to guess what's going on here
-2) All the functions in niva have receivers, because they are actually messages(Smalltalk term). 
-So it's just much easier to get a list of all possible messages with auto-completion on any value and understand what they mean too:  
-```Scala
-    charAt 0 it 
-    // vs
-    it at: 0
-    
-    replaceAll " " "-" text
-    // vs
-    text replace: " " with: "-"
-```
-> Ofc its cheating since niva version has `it first` unhandled, but my point is not about the length here
-{style="note"}
-
+`receiver.keyword1keyword2(arg1, arg2)`
 
 
 If you need to compose keyword msgs inside each other use (), also you can put args on new lines:   
@@ -166,3 +146,25 @@ So I added pipe operator, which wraps everything to the left in brackets
 `1 from: 2 |>  to: 3 |> and: 4`  
 
 More on that here: [pipes](Pipes-and-Cascades.md)
+
+
+## Named args vs positional args
+
+Here you can see why I think named arguments are better than positional ones:
+
+![compareWithUnison.png](compareWithUnison.png)
+
+1) `replaceAll " " "-" test`, it's nearly impossible to guess what's going on here
+2) All the functions in niva have receivers, because they are actually messages(Smalltalk term).
+   So it's just much easier to get a list of all possible messages with auto-completion on any value and understand what they mean too:
+```Scala
+    charAt 0 it 
+    // vs
+    it at: 0
+    
+    replaceAll " " "-" text
+    // vs
+    text replace: " " with: "-"
+```
+> Ofc its cheating since niva version has `it first` unhandled, but my point is not about the length here
+{style="note"}

@@ -30,6 +30,16 @@
             </toc-element>
         </toc-element>
     </toc-element>
+    <toc-element topic="Standard-Library.md">
+        <toc-element topic="Int.md"/>
+        <toc-element topic="StringType.md"/>
+        <toc-element topic="StringBuilder.md">
+        </toc-element>
+        <toc-element topic="Mutable-Map.md"/>
+        <toc-element topic="MutableSet.md"/>
+        <toc-element topic="IntRange.md"/>
+        <toc-element topic="MutableList.md"/>
+    </toc-element>
     <toc-element topic="Coding.md">
         <toc-element topic="Test.md"/>
         <toc-element topic="Error-handling.md"/>

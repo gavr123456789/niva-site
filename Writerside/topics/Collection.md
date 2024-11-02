@@ -1,5 +1,6 @@
 # Collections
-
+There is immutable and mutable version of each collection.  
+For example `MutableList` and just `List` which is immutable.  
 - [](List.md)  
 - [](Set.md)  
 - [](Map.md)
