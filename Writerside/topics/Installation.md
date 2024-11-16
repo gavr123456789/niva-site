@@ -24,7 +24,11 @@ If you have `expanded from macro 'NS_FORMAT_ARGUMENT'` problem with buildNativeN
 
 
 ## Get binaries from releases
-TODO
+Soon
 
+## Valse
 
+![lsp-example.png](lsp-example.png)
 
+There are an LSP server and vscode plugin, you can find install instructions here:  
+https://github.com/gavr123456789/niva-vscode-bundle

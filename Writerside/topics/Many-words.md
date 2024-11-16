@@ -1,5 +1,5 @@
 # About syntax
-## 
+
 I have often come across the fact that in functional languages  
 it is necessary to keep a lot of functions in your head.
 Of course, it often helps that they are divided into modules, for example List.map or List.filter.

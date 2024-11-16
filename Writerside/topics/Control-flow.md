@@ -1,10 +1,10 @@
 # Control flow
-Everything is a message
 
 ## If
-Usual if is a `ifTrue:` message for Boolean type, that takes [codeblock](CodeBlocks.md) as argument.
-There is 4 messages with all possible combination.
-The most common to use is `ifTrue:ifFalse:`
+Usual if is a `ifTrue:` message for Boolean type, that takes [codeblock](CodeBlocks.md) as argument.  
+It will evaluate this block if it was send to true.  
+There is 4 messages with all possible combination.  
+The most common to use is `ifTrue:ifFalse:`  
 ```Scala
 1 < 2 ifTrue: [1 echo]
 1 > 2 ifFalse: [2 echo]
@@ -18,43 +18,30 @@ The last 2 messages have the signature:
 Which means that the last expression of each branch is returned as a result.  
 In the first example x will be equal 1:  
 ```Scala
-// simple
 x = true ifTrue: [1] ifFalse: [2]
-
-// `exist` returns type Boolean, so we can send ifTrue:ifFalse: to it
-config = directory exist 
-    ifTrue: [ directory / "config.conf" |> readAll ]
-    ifFalse: [ 
-        path = directory / "config.conf"
-        content = Config empty
-        FileSystem write: path content: content
-        content
-    ]
+y = 1 inc inc > 5 dec dec ifTrue: [1 + 5] ifFalse: [5 - 1]
+// 3 > 3 
+// y = 4
 ```
 
 In this theoretical program we are getting content of the config file if it exists or create it if not.  
-Notice: codeblocks always return its last expression as value  
-
-## If syntax sugar
-Since if is quite often thing, I created syntax sugar for it:    
-`true => expr` for `true ifTrue: [expr]`    
-and    
-`true => expr |=> expr`for `true ifTrue: [expr] ifTrue: [expr]`
-
-```Scala
-1 < 2 => "yay" echo
-1 < 2 ifTrue: ["yay" echo]
-
-// with else branch
-1 > 2 => "yay" echo |=> "oh no" echo
-1 > 2 ifTrue: ["yay" echo] ifFalse: ["oh no" echo]
-```
+Notice: codeblocks always return its last expression as value
 
 ## Match
 There was no way to do this in original Smalltalk, so they used to create 
 a table with match-values to codeblocks  
 
-But since in niva I replaced inheritance with tagged unions I really need special syntax for matching:  
+But since in niva I replaced inheritance with tagged unions I really need special syntax for matching.  
+```Scala
+| x // match against x
+| 1 => x inc echo // if x == 1 then increment it and print
+| 2 => x dec echo
+|=> x echo // else\default branch
+```
+You can see that else branch, is just a usual branch where condition is missing  
+`| 2 => x dec echo`  
+`| ??? => x echo`  
+`|=> x echo`
 
 ```Scala
 x = "Alice"
@@ -90,6 +77,26 @@ Shape getArea -> Float = | this
 // its exhaustive, so when u add new branch 
 // all the matches will become errors until all cases processed
 ```
+
+
+## If syntax sugar
+Since if is quite often thing, I created syntax sugar for ifTrue:    
+`true => expr` for `true ifTrue: [expr]`    
+and    
+`true => expr |=> expr`for `true ifTrue: [expr] ifTrue: [expr]`
+
+```Scala
+1 < 2 => "yay" echo
+1 < 2 ifTrue: ["yay" echo]
+
+// with else branch
+1 > 2 => "yay" echo |=> "oh no" echo
+1 > 2 ifTrue: ["yay" echo] ifFalse: ["oh no" echo]
+```
+You can find consistency between if and match.
+
+`| match againts => do`
+`conditiont => do`
 
 ## If abuse
 There are no if ifelse else syntax chain, but you can do it like with `? :` op in C

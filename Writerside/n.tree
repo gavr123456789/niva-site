@@ -7,8 +7,6 @@
                  start-page="reference.md">
 
     <toc-element topic="reference.md">
-        <toc-element topic="Many-words.md"/>
-        <toc-element topic="Functional-syntax-problems.md"/>
         <toc-element topic="Installation.md"/>
         <toc-element topic="Usage.md"/>
     </toc-element>
@@ -30,8 +28,8 @@
         </toc-element>
     </toc-element>
     <toc-element topic="Coding.md">
-        <toc-element topic="Test.md"/>
         <toc-element topic="Error-handling.md"/>
+        <toc-element topic="Test.md"/>
         <toc-element topic="Bindings.md">
             <toc-element topic="Files.md"/>
             <toc-element topic="Server.md"/>
@@ -52,16 +50,18 @@
         <toc-element topic="vs-Java.md"/>
     </toc-element>
     <toc-element topic="Advanced.md">
-        <toc-element topic="Reference-documentation-generation.md"/>
+        <toc-element topic="Concepts.md">
+            <toc-element topic="Mutability.md"/>
+        </toc-element>
         <toc-element topic="Common-Niva-Patterns.md"/>
-        <toc-element topic="Null.md"/>
+        <toc-element topic="Reference-documentation-generation.md"/>
         <toc-element topic="Pipes-and-Cascades.md"/>
         <toc-element topic="CompileTime-Reflection.md"/>
-        <toc-element topic="Any-Nothing.md"/>
-    </toc-element>
-    <toc-element topic="Concepts.md">
-        <toc-element topic="Mutability.md"/>
         <toc-element topic="Binding.md"/>
+        <toc-element topic="Null.md"/>
+        <toc-element topic="Any-Nothing.md"/>
+        <toc-element topic="Functional-syntax-problems.md"/>
+        <toc-element topic="Many-words.md"/>
     </toc-element>
     <toc-element topic="ExamplesTODO.md">
         <toc-element topic="Side-by-side.md">
