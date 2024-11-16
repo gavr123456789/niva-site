@@ -26,24 +26,12 @@
         <toc-element topic="Collection.md">
             <toc-element topic="List.md"/>
             <toc-element topic="Set.md"/>
-            <toc-element topic="Map.md">
-            </toc-element>
+            <toc-element topic="Map.md"/>
         </toc-element>
-    </toc-element>
-    <toc-element topic="Standard-Library.md">
-        <toc-element topic="Int.md"/>
-        <toc-element topic="StringType.md"/>
-        <toc-element topic="StringBuilder.md">
-        </toc-element>
-        <toc-element topic="Mutable-Map.md"/>
-        <toc-element topic="MutableSet.md"/>
-        <toc-element topic="IntRange.md"/>
-        <toc-element topic="MutableList.md"/>
     </toc-element>
     <toc-element topic="Coding.md">
         <toc-element topic="Test.md"/>
         <toc-element topic="Error-handling.md"/>
-        <toc-element topic="Null.md"/>
         <toc-element topic="Bindings.md">
             <toc-element topic="Files.md"/>
             <toc-element topic="Server.md"/>
@@ -51,21 +39,29 @@
             </toc-element>
         </toc-element>
     </toc-element>
+    <toc-element topic="Standard-Library.md">
+        <toc-element topic="Int.md"/>
+        <toc-element topic="StringType.md"/>
+        <toc-element topic="StringBuilder.md"/>
+        <toc-element topic="MutableList.md"/>
+        <toc-element topic="MutableSet.md"/>
+        <toc-element topic="Mutable-Map.md"/>
+        <toc-element topic="IntRange.md"/>
+    </toc-element>
     <toc-element topic="Everything-you-need.md">
         <toc-element topic="vs-Java.md"/>
     </toc-element>
     <toc-element topic="Advanced.md">
+        <toc-element topic="Reference-documentation-generation.md"/>
         <toc-element topic="Common-Niva-Patterns.md"/>
+        <toc-element topic="Null.md"/>
         <toc-element topic="Pipes-and-Cascades.md"/>
         <toc-element topic="CompileTime-Reflection.md"/>
         <toc-element topic="Any-Nothing.md"/>
-        <toc-element topic="Not-macros.md"/>
-        <toc-element topic="Syntax-Sugar.md"/>
     </toc-element>
     <toc-element topic="Concepts.md">
         <toc-element topic="Mutability.md"/>
         <toc-element topic="Binding.md"/>
-        <toc-element topic="Package.md"/>
     </toc-element>
     <toc-element topic="ExamplesTODO.md">
         <toc-element topic="Side-by-side.md">

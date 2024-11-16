@@ -2,9 +2,9 @@
 Niva is strongly inspired by the forgotten [Smalltalk](https://www.codeproject.com/Articles/1241904/Introduction-to-the-Smalltalk-Programming-Language) language.  
 [How learning Smalltalk can improve your skills as a programmer](https://medium.com/smalltalk-talk/how-learning-smalltalk-can-improve-your-skills-as-a-programmer-fc5b2f56685)  
 
-Smalltalk tried to minimize the number of parentheses in it's syntax while remaining very similar to Lisp.  
+Smalltalk tried to minimize the number of parentheses in it's syntax while remaining very similar to Lisp in its nature.  
 Instead of everything being a S-expression, everything is a message send.  
-So we can say that niva is a typed Lisp with much less parentheses, but with methods and tagged unions.    
+So we can say that niva is a typed Lisp with much less parentheses, + methods and tagged unions.    
 
 On an imaginary graph of complexity, I would put it here:  
 Go < Niva < Java < Kotlin < Scala
@@ -24,8 +24,8 @@ is always a receiver, `"Hello" echo` instead of `echo("Hello")`,
 print is a message for String, not a top level function
 - Heavy lambda utilization. They are much easier to create(`[42]` is valid lambda that returns 42) and free to use thanks to inlining
 - There are no if\while\do while statements, everything is a message send, like in Smalltalk with a few exceptions for type declaration and matching
-- Null safety
-- Errors are between values and exceptions(nim-like effects) and all possible errors of the scope is union
+- Null safety (Swift\Kotlin like nullable types)
+- Errors are between values and exceptions(Nim\Roc-like effects) and all possible errors of the scope is union that can be exhaustively matched
 - No imports. Nowadays modern IDEs are making imports for you, so why not
 move this feature to the language level. As long as the types do not completely match in name and field names, the imports will be inferred automatically
 - Application level language. 

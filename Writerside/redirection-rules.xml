@@ -66,4 +66,24 @@
         <description><![CDATA[Created after removal of "<vs-Typescript.md>" from niva]]></description>
         <accepts>vs-Typescript.html</accepts>
     </rule>
+    <rule id="3fda93ad">
+        <description>Created after removal of "Packages" from niva</description>
+        <accepts>Packages.html</accepts>
+    </rule>
+    <rule id="296c61df">
+        <description>Created after removal of "Project" from niva</description>
+        <accepts>Project.html</accepts>
+    </rule>
+    <rule id="a8941af">
+        <description>Created after removal of "Package" from niva</description>
+        <accepts>Package.html</accepts>
+    </rule>
+    <rule id="29924d3a">
+        <description>Created after removal of "Not macros" from niva</description>
+        <accepts>Not-macros.html</accepts>
+    </rule>
+    <rule id="1883d6aa">
+        <description>Created after removal of "Syntax Sugar" from niva</description>
+        <accepts>Syntax-Sugar.html</accepts>
+    </rule>
 </rules>

@@ -1,5 +1,6 @@
 # Code examples
-Not finished
+That's just a copy of some examples from https://github.com/gavr123456789/Niva/tree/main/Niva/Niva/examples  
+
 ## Types
 ```Scala
 // create type

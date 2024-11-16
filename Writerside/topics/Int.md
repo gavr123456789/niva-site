@@ -1,3 +1,5 @@
+This is just an export of `niva info > info.md`
+
 # Int
 
 ### unary

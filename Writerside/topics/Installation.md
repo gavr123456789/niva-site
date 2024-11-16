@@ -3,19 +3,11 @@ There are 2 way to install it, the JVM and Native.
 JVM is much easier but will compile 10-30% slower.
 
 ## Compile from sources
-
-### sh script
-#### JVM
-1) `sh compile.sh jvm`
-2) run compiler from bin folder
-#### Native
-1) install graalvm `yay -S jdk21-graalvm-bin` and set it default: `sudo archlinux-java set java-21-graalvm` on Arch, `nix shell nixpkgs#graalvm-ce` on nix
-2) `sh compile.sh bin`
-
 ### Gradle
-If you have graalvm in your JAVA_HOME then inside /Niva/Niva/Niva folder run:  
-`./gradlew buildNativeNiva` this will create native binary in ~/.niva/bin  
+If you have graalvm in your JAVA_HOME then inside /Niva/Niva/Niva folder run:
 `./gradlew buildJvmNiva` this will create jvm based binary in ~/.niva/niva/bin
+`./gradlew buildNativeNiva` this will create native binary in ~/.niva/bin if you have GraalVM as ur default JVM.
+
 
 #### How to install GraalVM
 Arch: `yay -S jdk22-graalvm-bin`  

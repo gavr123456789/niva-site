@@ -1,6 +1,8 @@
 # Mutability
+// This will most likely change soon.  
+  
 There is 2 types of mutability:
-1) Variable mutability(let const in JS or var val in Kotlin)
+1) Variable mutability(`let` `const` in JS or `var` `val` in Kotlin)
 2) Type mutability (fields of type are immutable)
 
 ## Variable mutability

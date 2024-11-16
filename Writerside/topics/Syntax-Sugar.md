@@ -1,3 +1,0 @@
-# Syntax Sugar
-
-Start typing here...

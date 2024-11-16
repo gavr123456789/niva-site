@@ -44,14 +44,22 @@ Types with zero fields are completely fine
 ```Scala
 type Printer
 ```
-
-Since all messages have a receiver in the field, 
-you are always in the context of some type, 
-so empty types can be used simply to organize the code
+So empty types can be used simply to organize the code
 
 ```Scala
-extend Printer [
+extend Logger [
     on info::String = "Info: $info" echo
     on debug::String = "Debug: $debug" echo
 ]
+l = Logger new
+l info
 ```
+
+## Doc comments
+`///` is a doc comment, you can reference other types from it with @
+
+![doc-comment1.png](doc-comment1.png)  
+
+![doc-comment2.png](doc-comment2.png)  
+
+Same works for methods declarations

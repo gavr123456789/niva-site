@@ -1,4 +1,4 @@
-# Basic Syntax
+# Getting started
 
 
 ## Hello world is one liner
@@ -9,10 +9,10 @@
 `niva run main.niva`  
 Instead of `echo("Hello world")` we use `"Hello world" echo`
 
-// add badge
-To run the code, create a file main.niva and run it with `niva run`  
-It will take longer for the first time
 
+>To run the code use `niva run file.niva` or just `niva run` if file named main  
+It may take longer the first time
+{style="note"}
 
 ## Structured by AST
 

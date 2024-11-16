@@ -2,8 +2,8 @@
 # Message declaration
 
 `Type name = body` -  declaration  
-`instance name` - call   
-
+`obj name` - call   
+## Unary 
 ```Scala
 Type name = body // declaration
 instance name    // call
@@ -12,16 +12,6 @@ Int add2 = this + 2 // declare message for Int
 ```
 
 As you can see, the declaration and the call are consistent.
-Declaration of binary and unary work the same way:
-
-```Scala
-// Binary
-// ReceiverType op arg = [...]
-Path / x::String = 1 echo
-// Keyword
-// ReceiverType key1 key2 = [...]
-Int from::Int to::Int = 1 echo
-```
 
 
 ## Return type
@@ -30,7 +20,13 @@ Int from::Int to::Int = 1 echo
 Int add2 -> Int = this + 2
 ```
 
-## Local arg names
+## Keyword
+
+```Scala
+// ReceiverType key1 key2 = [...]
+Int from::Int to::Int = 1 echo
+```
+### Local arg names
 If the key is not well suited for the name of a local variable, 
 there is a syntax for declaring a separate name for them.
 
@@ -75,3 +71,27 @@ extend Person [
     on withLocalName: x::Int = x echo
 ]
 ```
+
+## Binary
+I would not recommend to create a custom binary message(i.e. operator overloading),
+usually keyword message with one arg is more readable.  
+
+But here are rare cases when its really suits, for example for some DSL purposes.
+```Scala
+11d/9m/1998y
+```
+here we have 5 message calls, 3 unary `d` `m` `y` and 2 binary `/` between them.  
+Since unary always evals first it is possible to create such DSL for dates.
+Same for file path, for example message like
+```Scala
+"home" / "user" / "music"
+```
+Could create a path with proper delimiters(`/` on Unix and `\` on Windows)
+
+
+```Scala
+// ReceiverType op arg = [...]
+Path / x::String = 1 echo
+```
+
+And ofc its not possible to overide the defaults operators like `Int + Int`

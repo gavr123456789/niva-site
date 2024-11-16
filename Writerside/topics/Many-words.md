@@ -1,12 +1,12 @@
-# Many words
-
-I have often come across the fact that in functional languages it is 
-necessary to keep a lot of functions in memory.  
+# About syntax
+## 
+I have often come across the fact that in functional languages  
+it is necessary to keep a lot of functions in your head.
 Of course, it often helps that they are divided into modules, for example List.map or List.filter.
 
 But this is not so useful with more specific data types.  
 Most of the time, I only have a rough idea of what operations 
-I want to perform and the only solution is to go and look for something similar in the documentation in the documentation.
+I want to perform and the only solution is to go and look for something similar in the lang documentation.
 
 ## OOP
 OOP in some sense solved this problem by placing functions inside types. 
