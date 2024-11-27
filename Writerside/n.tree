@@ -26,9 +26,10 @@
             <toc-element topic="Set.md"/>
             <toc-element topic="Map.md"/>
         </toc-element>
+        <toc-element topic="Generics.md"/>
+        <toc-element topic="Error-handling.md"/>
     </toc-element>
     <toc-element topic="Coding.md">
-        <toc-element topic="Error-handling.md"/>
         <toc-element topic="Test.md"/>
         <toc-element topic="Bindings.md">
             <toc-element topic="Files.md"/>
