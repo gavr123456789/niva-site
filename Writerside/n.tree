@@ -28,6 +28,7 @@
         </toc-element>
         <toc-element topic="Generics.md"/>
         <toc-element topic="Error-handling.md"/>
+        <toc-element topic="Message-reference.md"/>
     </toc-element>
     <toc-element topic="Coding.md">
         <toc-element topic="Test.md"/>
