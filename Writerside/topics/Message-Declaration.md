@@ -101,7 +101,20 @@ Int add: x::Int -> Int = [
 result = 1 add: 2
 result echo
 ```
-Try to run this example `niva filename.niva`
+Try to run this example `niva filename.niva`  
+
+There is also syntax sugar, just `.` can be used instead of `this`
+```Scala
+    type Foo
+    foo = Foo new
+    Foo bar = "hi!!!" echo
+    Foo zig = [
+        this bar
+        .bar // same thing
+    ]
+    
+    
+```
 
 ## Fields
 All the fields of the type are added in to scope of the method
