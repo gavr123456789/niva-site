@@ -119,14 +119,43 @@ Shape getArea -> Float = | this
 Nullability
 ```Scala
 x::Int? = null
-...TODO
+q = x unpackOrPANIC
+x unpack: [it echo]
+w = x unpack: [it inc] or: -1
+e = x unpackOrValue: -1
 ```
 
 Handling the error:
+```Scala
+x = file read orPANIC
+x = file read orValue: "no file"
+```
+Look for more in [](Error-handling.md)
 
-
+## Misc
 
 Local arg names:
 ```Scala
 Int from: x::Int to: y::Int = this + x + y
+```
+
+Syntax sugar for this
+```Scala
+Person foo = [
+    .bar
+    this bar // same thign
+]
+```
+
+Compile time reflection
+```Scala
+Foo bar::Int baz::String = [
+    // getting string representation from call side
+    a = Compiler getName: 0
+    b = Compiler getName: 1
+    c = Compiler getName: 2
+    a echo
+    b echo
+    c echo
+]
 ```

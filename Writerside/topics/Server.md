@@ -1,3 +1,2 @@
-# Server
+# Simple HTTP Server
 
-TODO
