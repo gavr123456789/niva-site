@@ -1,3 +1,2 @@
 # Advanced
 
-Start typing here...
