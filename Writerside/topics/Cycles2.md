@@ -3,8 +3,8 @@ There is no special syntax for cycles in niva, everything is a message send.
 ## For loops
 
 ```Scala
-1..3 forEach: [ it echo ] // 1 2 
-1..<3 forEach: [ it echo ] // 1 2 3
+1..3 forEach: [ it echo ] // 1 2 3
+1..<3 forEach: [ it echo ] // 1 2
 ```
 Here `..` is a binary message for Int that creates `IntRange`.  
 And `IntRange` can receive `forEach:` message.
