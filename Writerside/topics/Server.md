@@ -35,7 +35,7 @@ Program new
 
 Let's define the method for getting info. I will use [](Message-Declaration.md#extend) syntax here:
 
-```COBOL
+```Scala
 extend Program [
     on httpGet: uri::String -> Response = [
         request = Request method: Method.GET uri: uri
@@ -92,7 +92,7 @@ Program new getCurrency base echo
 ### One-liner
 Here single expression version, that looks kinda Clojure
 
-```Clojure
+```Scala
 URI = "https://api.frankfurter.dev/v1/latest"
 cur = Json::CurrencyResponce 
     decode: ((JavaHttpClient new) 
